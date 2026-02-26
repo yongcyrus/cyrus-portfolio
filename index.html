@@ -1,10 +1,238 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Cyrus Portfolio</title>
-  </head>
-  <body>
-    <h1>It works 🎉</h1>
-    <p>This is my first portfolio page.</p>
-  </body>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Chen — Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">AC<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">☽</span>
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-tag reveal-up">Full-Stack Developer</p>
+      <h1 class="hero-name reveal-up">Alex<br><span class="outline-text">Chen</span></h1>
+      <p class="hero-sub reveal-up">I build fast, accessible, beautifully crafted digital experiences — from API to pixel.</p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">01 — About</p>
+          <h2 class="section-title">Crafting code<br>with intention.</h2>
+          <p>I'm a full-stack developer with 5+ years of experience building production web applications. I care deeply about performance, clean architecture, and the details that make a good product great.</p>
+          <p>When I'm not coding, you'll find me contributing to open source, writing technical articles, or exploring the overlap between design and engineering.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years Exp.</span></div>
+            <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Projects</span></div>
+            <div class="stat"><span class="stat-num">12</span><span class="stat-label">OSS Repos</span></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="about-card-inner">
+              <div class="code-window">
+                <div class="code-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <pre class="code-block"><code><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Alex Chen"</span>,
+  <span class="c-prop">role</span>: <span class="c-str">"Full-Stack"</span>,
+  <span class="c-prop">stack</span>: [
+    <span class="c-str">"React"</span>, <span class="c-str">"Node"</span>,
+    <span class="c-str">"TypeScript"</span>, <span class="c-str">"Go"</span>
+  ],
+  <span class="c-prop">available</span>: <span class="c-bool">true</span>,
+  <span class="c-prop">coffee</span>: <span class="c-str">"always"</span>
+};</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <p class="section-label">02 — Projects</p>
+      <h2 class="section-title">Selected Work</h2>
+      <div class="projects-grid">
+
+        <article class="project-card" data-project="0">
+          <div class="project-card-header">
+            <span class="project-tag">Full-Stack</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <h3 class="project-name">Horizon CRM</h3>
+          <p class="project-desc">A real-time CRM platform with live dashboards, role-based access control, and automated reporting built for a 200-person sales team.</p>
+          <div class="project-tech">
+            <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="1">
+          <div class="project-card-header">
+            <span class="project-tag">API / Backend</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <h3 class="project-name">FlowAPI</h3>
+          <p class="project-desc">A high-throughput REST & GraphQL API gateway handling 10k+ req/s with automatic rate-limiting, caching, and a developer dashboard.</p>
+          <div class="project-tech">
+            <span>Go</span><span>GraphQL</span><span>Docker</span><span>AWS</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="2">
+          <div class="project-card-header">
+            <span class="project-tag">Open Source</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <h3 class="project-name">Patchwork UI</h3>
+          <p class="project-desc">An accessible, headless component library for React with full keyboard navigation, ARIA compliance, and zero runtime dependencies.</p>
+          <div class="project-tech">
+            <span>TypeScript</span><span>React</span><span>Storybook</span><span>Vitest</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="3">
+          <div class="project-card-header">
+            <span class="project-tag">ML / Data</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <h3 class="project-name">Pulse Analytics</h3>
+          <p class="project-desc">An ML-powered analytics platform that ingests event streams and surfaces anomaly alerts and predictive churn scores for SaaS products.</p>
+          <div class="project-tech">
+            <span>Python</span><span>FastAPI</span><span>PyTorch</span><span>Kafka</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <p class="section-label">03 — Skills</p>
+      <h2 class="section-title">Technical Stack</h2>
+      <div class="skills-layout">
+        <div class="skills-bars">
+          <div class="skill-row">
+            <div class="skill-meta"><span>TypeScript / JavaScript</span><span class="skill-pct">95%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>React / Next.js</span><span class="skill-pct">92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Node.js / Go</span><span class="skill-pct">88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>PostgreSQL / Redis</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>AWS / Docker / CI-CD</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Python / ML tooling</span><span class="skill-pct">72%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+        </div>
+        <div class="skills-chips-col">
+          <p class="chips-title">Also comfortable with</p>
+          <div class="chips">
+            <span>GraphQL</span><span>Prisma</span><span>Tailwind</span>
+            <span>Figma</span><span>Vitest</span><span>Playwright</span>
+            <span>Terraform</span><span>Linux</span><span>Git</span>
+            <span>Rust</span><span>WebSockets</span><span>gRPC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <p class="section-label">04 — Contact</p>
+      <h2 class="section-title contact-title">Let's build<br>something great.</h2>
+      <p class="contact-sub">Open to full-time roles, contract work, and interesting collaborations. I typically respond within 24 hours.</p>
+      <div class="contact-actions">
+        <a href="mailto:alex.chen@email.com" class="btn-primary btn-large">Send an Email ↗</a>
+        <div class="social-links">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2024 Alex Chen</span>
+      <span>Designed & built with care.</span>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
